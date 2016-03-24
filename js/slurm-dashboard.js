@@ -501,7 +501,7 @@ function get_node_colors(slurmnode) {
   }
 
   /* node state */
-  switch(slurmnode.node_state) {
+  switch(slurmnode.state) {
     case 'IDLE':
     case 'IDLE*':
       state_color = color_available;
@@ -548,7 +548,7 @@ function get_node_colors(slurmnode) {
       node_color = color_unavailable;
       break;
     default:
-      console.log("node: " + slurmnode.name + " -> state: " + slurmnode.node_state);
+      console.log("node: " + slurmnode.name + " -> state: " + slurmnode.state);
       state_color = "black"
       node_color = color_unknown;
   }
